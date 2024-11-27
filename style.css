@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: antiquewhite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'Dosis', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: #110d24;
+    color: white;
+}
+
+nav ul li {
+    padding: 0 12px;
+}
+
+.brand img {
+    width: 63px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container {
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url('toji.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    #progressbar {
+        width: 60vh;
+    }
+
+    .songinfo {
+        left: 5vw;
+    }
+}
+
+.bottom {
+    position: sticky;
+    height: 130px;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons {
+    margin-top: 30px;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+#progressbar {
+    width: 80vh;
+    cursor: pointer;
+}
+
+/* Custom style for progress bar */
+#progressbar::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #f39c12;
+}
+
+#progressbar::-webkit-slider-runnable-track {
+    background-color: #ddd;
+    height: 4px;
+}
+
+.songitemcontainer {
+    margin: 74px;
+}
+
+.songItem {
+    height: 50px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+    padding: 5px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect for song items */
+.songItem:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.songItem img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Improved text readability for song titles */
+.songItem span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.songlistplay {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.songlistplay .timestamp {
+    display: flex;
+    align-items: center;
+}
+
+.timestamp {
+    margin-right: 23px;
+}
+
+.timestamp i {
+    margin-left: 8px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Hover effect for play icons */
+.timestamp i:hover {
+    color: #f39c12;
+}
+
+.songinfo {
+    position: absolute;
+    left: 9vw;
+}
+
+.songinfo img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
